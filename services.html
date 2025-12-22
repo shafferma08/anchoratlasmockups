@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Anchor & Atlas, LLC</title>
+    <meta name="description"
+        content="Explore our white-glove concierge services, from real estate support to lifestyle management and senior companionship.">
+    <link rel="icon" type="image/svg+xml" href="assets/img/secondary-logo.svg">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400..900&family=Inter:wght@300..700&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        .services-hero {
+            height: 50vh;
+            min-height: 400px;
+        }
+
+        .services-list-section {
+            padding: 5rem 1rem;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .service-category-block {
+            margin-bottom: 6rem;
+            scroll-margin-top: 180px;
+            /* For anchor linking */
+        }
+
+        .service-category-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .service-category-title {
+            font-family: var(--font-serif);
+            font-size: 2rem;
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+            display: inline-block;
+            border-bottom: 2px solid var(--color-secondary);
+            padding-bottom: 0.5rem;
+        }
+
+        .service-category-desc {
+            max-width: 48rem;
+            margin: 0 auto;
+            color: var(--color-gray-600);
+            font-size: 1.125rem;
+        }
+
+        .services-grid-list {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .services-grid-list {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 4rem;
+            }
+        }
+
+        .service-item-group {
+            background: white;
+            padding: 2rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--color-gray-100);
+            height: 100%;
+            transition: transform 0.3s;
+        }
+
+        .service-item-group:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            border-color: var(--color-light-teal);
+        }
+
+        .group-title {
+            font-family: var(--font-serif);
+            color: var(--color-dark-slate);
+            font-size: 1.25rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .group-icon {
+            color: var(--color-secondary);
+        }
+
+        .service-list-items li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: var(--color-gray-700);
+            line-height: 1.5;
+        }
+
+        .service-list-items li::before {
+            content: "•";
+            color: var(--color-primary);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 1.25rem;
+            line-height: 1.25rem;
+        }
+
+        /* Alternating layout for variety if desired, but grid is clean */
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="container navbar-content">
+            <!-- Logo -->
+            <div class="logo">
+                <a href="index.html" style="text-decoration: none; color: var(--color-pale-gold);">
+                    <img src="assets/img/secondary-logo-inverted.svg" alt="Anchor & Atlas" style="height: 3.5rem;">
+                </a>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="desktop-menu">
+                <a href="index.html">HOME</a>
+                <a href="services.html" class="active" style="color: var(--color-light-teal);">WHAT WE DO</a>
+                <a href="index.html#meet-wendy">MEET WENDY</a>
+                <a href="blog.html">THE COMPASS</a>
+                <a href="index.html#contact">CONTACT</a>
+
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/profile.php?id=61577375457717" target="_blank"
+                        style="color: inherit; display: flex;"><i data-lucide="facebook" width="18" height="18"
+                            class="cursor-pointer"></i></a>
+                    <a href="https://www.instagram.com/wendy_bailey_chaves/" target="_blank"
+                        style="color: inherit; display: flex;"><i data-lucide="instagram" width="18" height="18"
+                            class="cursor-pointer"></i></a>
+                    <a href="https://www.tiktok.com/@wendy.bailey.chav" target="_blank"
+                        style="color: inherit; display: flex;"><i data-lucide="video" width="18" height="18"
+                            class="cursor-pointer"></i></a>
+                </div>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="mobile-menu-btn">
+                <button aria-label="Toggle Menu">
+                    <i data-lucide="menu" class="menu-icon"></i>
+                    <i data-lucide="x" class="close-icon" style="display: none;"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div class="mobile-menu" id="mobile-menu">
+            <a href="index.html">HOME</a>
+            <a href="services.html" style="background-color: rgba(255,255,255,0.1);">WHAT WE DO</a>
+            <a href="index.html#meet-wendy">MEET WENDY</a>
+            <a href="blog.html">THE COMPASS</a>
+            <a href="index.html#contact">CONTACT</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero services-hero">
+        <div class="hero-bg">
+            <img src="assets/hero-images/services-hero.png" alt="Services Hero - Organized Desk"
+                style="width: 100%; height: 100%; object-fit: cover; opacity: 1;">
+            <div class="hero-overlay" style="background-color: rgba(60, 74, 79, 0.5);"></div>
+        </div>
+
+        <div class="hero-content">
+            <h1 class="font-serif animate-on-scroll delay-100" style="font-size: 3rem; margin-bottom: 1rem;">
+                CURATED SERVICES
+            </h1>
+            <p class="animate-on-scroll delay-200"
+                style="font-size: 1.25rem; font-weight: 300; max-width: 40rem; margin: 0 auto;">
+                Designed to give you the gift of time. From real estate support to lifestyle management, we handle the
+                details so you can focus on the journey.
+            </p>
+        </div>
+    </section>
+
+    <!-- Services Sub-Navigation -->
+    <div class="services-nav animate-on-scroll delay-300">
+        <div class="services-nav-container">
+            <a href="#real-estate" class="services-nav-link">
+                <i data-lucide="key-round" width="16" height="16"></i> Real Estate
+            </a>
+            <a href="#lifestyle" class="services-nav-link">
+                <i data-lucide="calendar-check-2" width="16" height="16"></i> Lifestyle & Business
+            </a>
+            <a href="#senior" class="services-nav-link">
+                <i data-lucide="heart" width="16" height="16"></i> Senior Concierge
+            </a>
+        </div>
+    </div>
+
+    <!-- SERVICES CONTENT -->
+    <div class="services-list-section">
+
+        <!-- Category 1: Real Estate -->
+        <div id="real-estate" class="service-category-block animate-on-scroll">
+            <div class="service-category-header">
+                <div
+                    style="display: inline-flex; justify-content: center; margin-bottom: 1rem; color: var(--color-primary);">
+                    <i data-lucide="key-round" width="48" height="48"></i>
+                </div>
+                <h2 class="service-category-title">REAL ESTATE AGENT CONCIERGE</h2>
+                <p class="service-category-desc">
+                    Elevating the buying and selling experience. We partner with agents and homeowners to ensure every
+                    property puts its best foot forward.
+                </p>
+            </div>
+
+            <div class="services-grid-list">
+                <div class="service-item-group">
+                    <h3 class="group-title"><i data-lucide="home" class="group-icon"></i> Listing & Sales Support</h3>
+                    <ul class="service-list-items">
+                        <li><strong>Home Staging:</strong> Transforming spaces to appeal to buyers and maximize value.
+                        </li>
+                        <li><strong>Listing Preparation:</strong> Ensuring the property is photo-ready and pristine.
+                        </li>
+                        <li><strong>Home Watch:</strong> Monitoring vacant properties for safety and upkeep.</li>
+                        <li><strong>Post Purchase Assistance:</strong> Helping new owners settle in seamlessly.</li>
+                    </ul>
+                </div>
+
+                <div class="service-item-group">
+                    <h3 class="group-title"><i data-lucide="truck" class="group-icon"></i> Logistics & Coordination</h3>
+                    <ul class="service-list-items">
+                        <li><strong>Moving & Relocation Coordination:</strong> Managing movers, packing, and logistics.
+                        </li>
+                        <li><strong>Utility Hook Up:</strong> Setting up water, power, and internet before arrival.</li>
+                        <li><strong>Furniture Delivery:</strong> Coordinating / receiving shipments so you don't have to
+                            wait.</li>
+                        <li><strong>Home Project Oversight:</strong> Managing contractors and vendors on your behalf.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="service-item-group">
+                    <h3 class="group-title"><i data-lucide="gift" class="group-icon"></i> Finishing Touches</h3>
+                    <ul class="service-list-items">
+                        <li><strong>Welcome Home Gift Baskets:</strong> Curated gifts to welcome new owners.</li>
+                        <li><strong>Cleaning & Organization:</strong> Deep cleans for move-ins or move-outs.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Category 2: Lifestyle -->
+        <div id="lifestyle" class="service-category-block animate-on-scroll delay-100">
+            <div class="service-category-header">
+                <div
+                    style="display: inline-flex; justify-content: center; margin-bottom: 1rem; color: var(--color-primary);">
+                    <i data-lucide="calendar-check-2" width="48" height="48"></i>
+                </div>
+                <h2 class="service-category-title">PERSONAL & BUSINESS CONCIERGE</h2>
+                <p class="service-category-desc">
+                    Reclaim your time. Whether it’s managing household tasks or planning your next big event, we handle
+                    the logistics so you can enjoy the moment.
+                </p>
+            </div>
+
+            <div class="services-grid-list">
+                <div class="service-item-group">
+                    <h3 class="group-title"><i data-lucide="shopping-bag" class="group-icon"></i> Errands & Shopping
+                    </h3>
+                    <ul class="service-list-items">
+                        <li><strong>Personal Shopping:</strong> Gifts, clothing, or household items.</li>
+                        <li><strong>Grocery & Supply Shopping:</strong> Stocking the fridge and pantry.</li>
+                        <li><strong>Errand Running:</strong> Dry cleaning, pharmacy, and mail drops.</li>
+                    </ul>
+                </div>
+
+                <div class="service-item-group">
+                    <h3 class="group-title"><i data-lucide="briefcase" class="group-icon"></i> Home & Business Support
+                    </h3>
+                    <ul class="service-list-items">
+                        <li><strong>Appointment Scheduling:</strong> Managing calendars for home or business.</li>
+                        <li><strong>home Delivery Oversight:</strong> Waiting for packages and service providers.</li>
+                        <li><strong>Technology Assistance:</strong> Helping with devices and setups.</li>
+                        <li><strong>Home Project Oversight:</strong> Supervising repairs and maintenance.</li>
+                    </ul>
+                </div>
+
+                <div class="service-item-group">
+                    <h3 class="group-title"><i data-lucide="plane" class="group-icon"></i> Events & Travel</h3>
+                    <ul class="service-list-items">
+                        <li><strong>Travel Planning:</strong> Itineraries, bookings, and special occasions.</li>
+                        <li><strong>Event Planning:</strong> Live events, conferences, and venue procurement.</li>
+                        <li><strong>Culture Building:</strong> Creating climate and culture for teams/groups.</li>
+                    </ul>
+                </div>
+
+                <div class="service-item-group">
+                    <h3 class="group-title"><i data-lucide="flower-2" class="group-icon"></i> Home Care</h3>
+                    <ul class="service-list-items">
+                        <li><strong>Gardening Assistance:</strong> Plant care and outdoor upkeep.</li>
+                        <li><strong>Cleaning & Organizing:</strong> Decluttering spaces for peace of mind.</li>
+                        <li><strong>Storm Prep & Clean Up:</strong> Securing your home before and after weather events.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Category 3: Senior Concierge -->
+        <div id="senior" class="service-category-block animate-on-scroll delay-200">
+            <div class="service-category-header">
+                <div
+                    style="display: inline-flex; justify-content: center; margin-bottom: 1rem; color: var(--color-primary);">
+                    <i data-lucide="heart" width="48" height="48"></i>
+                </div>
+                <h2 class="service-category-title">SENIOR CONCIERGE & COMPANIONSHIP</h2>
+                <p class="service-category-desc">
+                    Compassionate support for independent living. We provide a helping hand and a friendly face to
+                    ensure safety, comfort, and connection.
+                </p>
+            </div>
+
+            <div class="services-grid-list">
+                <div class="service-item-group">
+                    <h3 class="group-title"><i data-lucide="coffee" class="group-icon"></i> Companionship</h3>
+                    <ul class="service-list-items">
+                        <li><strong>Daily Check-Ins:</strong> Peace of mind for families near and far.</li>
+                        <li><strong>In-Home Lunch Companion:</strong> Sharing meals and conversation.</li>
+                        <li><strong>Family Liaison:</strong> Keeping family members updated and connected.</li>
+                    </ul>
+                </div>
+
+                <div class="service-item-group">
+                    <h3 class="group-title"><i data-lucide="helping-hand" class="group-icon"></i> Daily Assistance</h3>
+                    <ul class="service-list-items">
+                        <li><strong>Light Housekeeping & Laundry:</strong> keeping living spaces tidy.</li>
+                        <li><strong>Meal Prep Assistance:</strong> Helping with nutrition and cooking.</li>
+                        <li><strong>Grocery Shopping:</strong> Ensuring essentials are always on hand.</li>
+                    </ul>
+                </div>
+
+                <div class="service-item-group">
+                    <h3 class="group-title"><i data-lucide="car" class="group-icon"></i> Transportation & Coordination
+                    </h3>
+                    <ul class="service-list-items">
+                        <li><strong>Dr. Appointment Transport:</strong> Safe rides to and from healthcare visits.</li>
+                        <li><strong>Home Repair Coordination:</strong> Vetting and overseeing service people.</li>
+                        <li><strong>Technology Assistance:</strong> Helping stay connected digitally.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="text-center animate-on-scroll" style="margin-top: 4rem;">
+            <p
+                style="margin-bottom: 2rem; font-size: 1.25rem; font-family: var(--font-serif); color: var(--color-dark-slate);">
+                Don't see exactly what you need? We pride ourselves on custom solutions.
+            </p>
+            <button class="btn-primary" onclick="window.location.href='index.html#contact'">
+                Contact Us for a Consultation
+            </button>
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <!-- Col 1 -->
+            <div>
+                <h4 class="footer-heading">Our Mission</h4>
+                <p class="footer-text">
+                    To empower your journey by providing the gift of time through thoughtfully curated
+                    white-glove concierge and personal assistant services.
+                </p>
+            </div>
+
+            <!-- Col 2 -->
+            <div>
+                <h4 class="footer-heading">Contact Info</h4>
+                <ul class="footer-links">
+                    <li>Operating out of Pinellas County, FL</li>
+                    <li>Available by appointment</li>
+                    <li>(727) 542-3302</li>
+                    <li><a href="mailto:anchorandatlasusa@gmail.com">anchorandatlasusa@gmail.com</a></li>
+                </ul>
+            </div>
+
+            <!-- Col 3 -->
+            <div>
+                <h4 class="footer-heading">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Meet Wendy</a></li>
+                    <li><a href="#">Pricing</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container copyright">
+            © <span id="current-year"></span> Anchor & Atlas, LLC. All Rights Reserved.
+        </div>
+    </footer>
+
+    <!-- Script to Run Logic -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>

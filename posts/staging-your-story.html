@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How Staging Tells Your Home’s Story - The Compass</title>
+    <meta name="description"
+        content="Discover how thoughtful staging can transform your home into a place buyers can envision their life unfolding.">
+    <link rel="icon" type="image/svg+xml" href="../assets/img/secondary-logo.svg">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400..900&family=Inter:wght@300..700&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../css/styles.css">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        .post-hero {
+            height: 50vh;
+            min-height: 400px;
+        }
+
+        .article-container {
+            max-width: 800px;
+            /* Optimal reading width */
+            margin: -4rem auto 0;
+            /* Overlap hero */
+            position: relative;
+            z-index: 10;
+            background-color: white;
+            padding: 3rem 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border-radius: 0.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .article-container {
+                padding: 4rem 5rem;
+                margin-bottom: 4rem;
+            }
+        }
+
+        .article-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--color-gray-300);
+        }
+
+        .article-category {
+            color: var(--color-secondary);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 1rem;
+            display: block;
+            font-size: 0.875rem;
+        }
+
+        .article-title {
+            font-family: var(--font-serif);
+            font-size: 2rem;
+            color: var(--color-primary);
+            line-height: 1.25;
+            margin-bottom: 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .article-title {
+                font-size: 2.5rem;
+                /* Larger on desktop */
+            }
+        }
+
+        .article-content {
+            font-size: 1.0625rem;
+            /* 17px */
+            line-height: 1.8;
+            color: var(--color-gray-600);
+        }
+
+        .article-content h2 {
+            font-family: var(--font-serif);
+            color: var(--color-dark-slate);
+            font-size: 1.5rem;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .article-content h3 {
+            font-family: var(--font-serif);
+            color: var(--color-primary);
+            font-size: 1.15rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .article-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .article-content ul {
+            list-style: disc;
+            padding-left: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--color-gray-600);
+        }
+
+        .article-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .article-content strong {
+            color: var(--color-dark-slate);
+            font-weight: 600;
+        }
+
+        /* CTA Box in post */
+        .post-cta {
+            background-color: var(--color-light-cream);
+            padding: 2rem;
+            border-left: 4px solid var(--color-secondary);
+            margin: 3rem 0;
+            font-style: italic;
+        }
+
+        /* Back link */
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: white;
+            margin-bottom: 1rem;
+            font-weight: 500;
+            opacity: 0.9;
+        }
+
+        .back-link:hover {
+            opacity: 1;
+            text-decoration: underline;
+        }
+
+        .hero-inner {
+            position: relative;
+            z-index: 10;
+            width: 100%;
+            max-width: 1280px;
+            padding: 0 1rem;
+            display: flex;
+            align-items: flex-start;
+            height: 100%;
+            padding-top: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="container navbar-content">
+            <!-- Logo -->
+            <div class="logo">
+                <a href="../index.html" style="text-decoration: none; color: var(--color-pale-gold);">
+                    <img src="../assets/img/secondary-logo-inverted.svg" alt="Anchor & Atlas" style="height: 3.5rem;">
+                </a>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="desktop-menu">
+                <a href="../index.html">HOME</a>
+                <a href="../services.html">WHAT WE DO</a>
+                <a href="../index.html#meet-wendy">MEET WENDY</a>
+                <a href="../blog.html" class="active" style="color: var(--color-light-teal);">THE COMPASS</a>
+                <a href="../index.html#contact">CONTACT</a>
+
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/profile.php?id=61577375457717" target="_blank"
+                        style="color: inherit; display: flex;"><i data-lucide="facebook" width="18" height="18"
+                            class="cursor-pointer"></i></a>
+                    <a href="https://www.instagram.com/wendy_bailey_chaves/" target="_blank"
+                        style="color: inherit; display: flex;"><i data-lucide="instagram" width="18" height="18"
+                            class="cursor-pointer"></i></a>
+                    <a href="https://www.tiktok.com/@wendy.bailey.chav" target="_blank"
+                        style="color: inherit; display: flex;"><i data-lucide="video" width="18" height="18"
+                            class="cursor-pointer"></i></a>
+                </div>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="mobile-menu-btn">
+                <button aria-label="Toggle Menu">
+                    <i data-lucide="menu" class="menu-icon"></i>
+                    <i data-lucide="x" class="close-icon" style="display: none;"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div class="mobile-menu" id="mobile-menu">
+            <a href="../index.html">HOME</a>
+            <a href="../services.html">WHAT WE DO</a>
+            <a href="../index.html#meet-wendy">MEET WENDY</a>
+            <a href="../blog.html" style="background-color: rgba(255,255,255,0.1);">THE COMPASS</a>
+            <a href="../index.html#contact">CONTACT</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero post-hero">
+        <div class="hero-bg">
+            <img src="../assets/blog-images/staging-story.png" alt="Hero Background"
+                style="width: 100%; height: 100%; object-fit: cover; opacity: 1;">
+            <div class="hero-overlay" style="background-color: rgba(60, 74, 79, 0.4);"></div>
+        </div>
+
+        <div class="hero-inner container">
+            <a href="../blog.html" class="back-link">
+                <i data-lucide="arrow-left" width="20" height="20"></i> Back to The Compass
+            </a>
+        </div>
+    </section>
+
+    <!-- ARTICLE CONTENT -->
+    <article class="article-section" style="background-color: var(--color-off-white); padding-bottom: 5rem;">
+        <div class="container">
+            <div class="article-container animate-on-scroll">
+                <header class="article-header">
+                    <span class="article-category">Staging & Design</span>
+                    <h1 class="article-title">How Staging Tells Your Home’s Story: Preparing Spaces for The Journey
+                        Ahead</h1>
+                    <div style="color: var(--color-gray-600); font-size: 0.9rem;">
+                        <span>By Anchor & Atlas</span> • <span>6 Min Read</span>
+                    </div>
+                </header>
+
+                <div class="article-content">
+                    <p class="lead"
+                        style="font-size: 1.25rem; color: var(--color-dark-slate); font-family: var(--font-serif);">
+                        At Anchor & Atlas, we believe home should feel steady, comforting, and full of possibility. When
+                        it’s time to sell, relocate, or simply step into a new season, your space deserves to be
+                        presented with the same care you’ve poured into living in it.
+                    </p>
+
+                    <p>
+                        That’s where staging comes in—not as decoration, but as a way to tell your home’s story with
+                        clarity, confidence, and warmth.
+                    </p>
+
+                    <p>
+                        Whether we’re refreshing a cozy bungalow for winter showings or preparing a coastal condo for
+                        the market, our goal is always the same: create spaces that help buyers instantly feel at home,
+                        while you focus on the journey ahead.
+                    </p>
+
+                    <h2>Why Staging Matters</h2>
+                    <p>
+                        Staging is about more than arranging furniture or adding accents. It helps buyers:
+                    </p>
+                    <ul>
+                        <li><strong>See possibility instead of distraction</strong></li>
+                        <li><strong>Feel the flow of each room naturally</strong></li>
+                        <li><strong>Connect emotionally</strong> with a space that feels calm, beautiful, and ready for
+                            new memories</li>
+                    </ul>
+                    <p>
+                        In a competitive market, staged homes often photograph better, show better, and stay top-of-mind
+                        long after buyers leave. Thoughtful staging transforms a house into a place buyers can envision
+                        their life unfolding.
+                    </p>
+
+                    <h2>How We Stage With Intention</h2>
+                    <p>
+                        Every home—and every client—is unique. We look at how you live now, where you’re headed next,
+                        and how we can highlight the heart of your home. We stage with intention through:
+                    </p>
+
+                    <h3>Enhancing what matters most</h3>
+                    <p>Natural light, spacious layouts, clean sightlines — we highlight the qualities that help buyers
+                        instantly connect to the home.</p>
+
+                    <h3>Calming visual noise</h3>
+                    <p>By simplifying and editing, we create a sense of ease. A decluttered, balanced space allows
+                        buyers to imagine themselves there without distraction.</p>
+
+                    <h3>Balancing beauty and function</h3>
+                    <p>Rooms are styled to look gorgeous in photos and feel natural in person.</p>
+
+                    <h3>Honoring your story</h3>
+                    <p>We often work with what you already have, layering in textures and pieces that elevate rather
+                        than replace.</p>
+
+                    <p>Every decision is purposeful, and every detail is part of the story your home tells.</p>
+
+                    <h2>Who Benefits From Staging</h2>
+                    <p>Staging isn’t just for listings — it supports the people behind them. It’s ideal for:</p>
+                    <ul>
+                        <li><strong>Sellers</strong> preparing for their next chapter</li>
+                        <li><strong>Busy families</strong> who need guidance on what to pack, store, or leave</li>
+                        <li><strong>Seasonal homeowners</strong> wanting their property to show beautifully</li>
+                        <li><strong>Real estate agents</strong> seeking listings that stand out</li>
+                        <li><strong>Investors or landlords</strong> who want faster, higher-quality showings</li>
+                    </ul>
+                    <p>No matter the situation, staging gives you a trusted partner and a clear path forward.</p>
+
+                    <h2>Our Promise In Every Room</h2>
+                    <p>When Anchor & Atlas stages your home, you can expect:</p>
+                    <ul>
+                        <li>Clear, consistent communication</li>
+                        <li>Respect for your home, time, and privacy</li>
+                        <li>Thoughtful service that treats your space like our own</li>
+                        <li>A proactive eye for details before they become distractions</li>
+                    </ul>
+
+                    <p>Our mission goes beyond staging. We steady the details, manage the prep, and help you focus on
+                        what’s next.</p>
+
+                    <div class="post-cta">
+                        <p style="margin-bottom: 0;">
+                            <strong>Anchor & Atlas:</strong> At Anchor & Atlas, we’re not just preparing a home — we’re
+                            preparing you for a smoother journey ahead.
+                        </p>
+                    </div>
+
+                    <div class="article-tags">
+                        <span class="tags-label">Tags:</span>
+                        <a href="#" class="article-tag">Home Staging</a>
+                        <a href="#" class="article-tag">Interior Design</a>
+                        <a href="#" class="article-tag">Real Estate</a>
+                        <a href="#" class="article-tag">Seller Tips</a>
+                    </div>
+
+                    <!-- Post Navigation -->
+                    <div class="post-navigation">
+                        <a href="fresh-paint-home-sales.html" class="nav-link">
+                            <span class="nav-label"><i data-lucide="arrow-left" width="16"></i> Previous</span>
+                            <span class="nav-title">Why Fresh Paint Rules</span>
+                        </a>
+                        <a href="mission-protect-what-matters.html" class="nav-link"
+                            style="text-align: right; align-items: flex-end;">
+                            <span class="nav-label">Next <i data-lucide="arrow-right" width="16"></i></span>
+                            <span class="nav-title">Our Mission to Protect What Matters</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div
+                    style="border-top: 1px solid var(--color-gray-300); margin-top: 3rem; padding-top: 2rem; text-align: center;">
+                    <p style="margin-bottom: 1rem; font-weight: 600;">Share this article</p>
+                    <div class="share-buttons"
+                        style="display: flex; gap: 1rem; justify-content: center; color: var(--color-primary);">
+                        <a href="#" class="share-btn" data-platform="facebook" aria-label="Share on Facebook"><i
+                                data-lucide="facebook" width="20" height="20"></i></a>
+                        <a href="#" class="share-btn" data-platform="twitter" aria-label="Share on Twitter"><i
+                                data-lucide="twitter" width="20" height="20"></i></a>
+                        <a href="#" class="share-btn" data-platform="linkedin" aria-label="Share on LinkedIn"><i
+                                data-lucide="linkedin" width="20" height="20"></i></a>
+                        <a href="#" class="share-btn" data-platform="copy" aria-label="Copy Link"><i data-lucide="link"
+                                width="20" height="20"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!-- Related Posts Section -->
+    <section class="related-posts-section">
+        <div class="container">
+            <h3 class="font-serif text-center"
+                style="font-size: 1.5rem; color: var(--color-primary); margin-bottom: 2rem;">Related Articles</h3>
+            <div class="related-grid" style="max-width: 60rem; margin: 0 auto;">
+                <!-- Related 1 -->
+                <article class="blog-card">
+                    <a href="fresh-paint-home-sales.html">
+                        <img src="../assets/blog-images/fresh-paint.png" alt="Living Room with Fresh Paint"
+                            class="blog-card-img">
+                    </a>
+                    <div class="blog-card-content">
+                        <span class="blog-category">Home Sales</span>
+                        <h3 class="blog-title" style="font-size: 1.125rem;">
+                            <a href="fresh-paint-home-sales.html">Why Fresh Paint Still Rules in Home Sales</a>
+                        </h3>
+                        <a href="fresh-paint-home-sales.html" class="read-more">Read Article</a>
+                    </div>
+                </article>
+
+                <!-- Related 2 -->
+                <article class="blog-card">
+                    <a href="mission-protect-what-matters.html">
+                        <img src="../assets/blog-images/our-mission.png" alt="Compass" class="blog-card-img">
+                    </a>
+                    <div class="blog-card-content">
+                        <span class="blog-category">Our Mission</span>
+                        <h3 class="blog-title" style="font-size: 1.125rem;">
+                            <a href="mission-protect-what-matters.html">Why We Started Anchor & Atlas</a>
+                        </h3>
+                        <a href="mission-protect-what-matters.html" class="read-more">Read Article</a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="text-center" style="margin-top: 3rem;">
+                <a href="../blog.html" class="btn-primary">Back to The Compass</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <!-- Col 1 -->
+            <div>
+                <h4 class="footer-heading">Our Mission</h4>
+                <p class="footer-text">
+                    To empower your journey by providing the gift of time through thoughtfully curated
+                    white-glove concierge and personal assistant services.
+                </p>
+            </div>
+
+            <!-- Col 2 -->
+            <div>
+                <h4 class="footer-heading">Contact Info</h4>
+                <ul class="footer-links">
+                    <li>Operating out of Pinellas County, FL</li>
+                    <li>Available by appointment</li>
+                    <li>(727) 542-3302</li>
+                    <li><a href="mailto:anchorandatlasusa@gmail.com">anchorandatlasusa@gmail.com</a></li>
+                </ul>
+            </div>
+
+            <!-- Col 3 -->
+            <div>
+                <h4 class="footer-heading">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="#">Meet Wendy</a></li>
+                    <li><a href="#">Pricing</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container copyright">
+            © <span id="current-year"></span> Anchor & Atlas, LLC. All Rights Reserved.
+        </div>
+    </footer>
+
+    <!-- Script to Run Logic -->
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
