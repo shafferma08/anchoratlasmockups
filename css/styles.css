@@ -433,9 +433,9 @@ button {
     height: auto;
     /* Allow growth */
     min-height: 60vh;
-    padding-top: 6rem;
-    padding-bottom: 6rem;
-    /* Space for overlap */
+    padding-top: 8rem;
+    padding-bottom: 9rem;
+    /* Reduced Space for better proximity */
 }
 
 /* Remove absolute positioning for this layout request */
@@ -602,13 +602,13 @@ button {
     align-items: center;
     justify-content: center;
     gap: 1rem;
-    margin: 1rem 0;
+    margin: 0.5rem 0;
     opacity: 0.9;
 }
 
 /* Hero Logo & Typography */
 .hero-logo-container {
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     /* Tightened gap as requested */
     width: 100%;
     display: flex;
@@ -1432,4 +1432,14 @@ button {
 .highlight-link:hover {
     color: var(--color-white) !important;
     border-color: var(--color-white) !important;
+}
+
+.service-cta-box {
+    background-color: var(--color-light-cream);
+    padding: 3rem;
+    border-radius: 0.5rem;
+    border-left: 6px solid var(--color-primary);
+    margin: 4rem auto 2rem;
+    max-width: 56rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
