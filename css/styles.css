@@ -392,9 +392,16 @@ button {
 
 .hero.page-hero h1 {
     font-family: var(--font-serif);
-    font-size: 3rem;
+    font-size: 2rem;
+    /* Responsive base size */
     margin-bottom: 1rem;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: 768px) {
+    .hero.page-hero h1 {
+        font-size: 3rem;
+    }
 }
 
 .hero.page-hero p {
@@ -1233,7 +1240,8 @@ button {
 .reviews-track-container {
     overflow: hidden;
     width: 100%;
-    margin: 0 1rem;
+    margin: 0;
+    /* Removed mobile margin */
     /* Masking for smooth edges check */
 }
 
@@ -1245,10 +1253,17 @@ button {
 
 .review-slide {
     flex: 0 0 100%;
-    padding: 1rem;
+    padding: 0.5rem;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
+}
+
+@media (min-width: 768px) {
+    .reviews-track-container {
+        margin: 0 1rem;
+    }
+
 }
 
 @media (min-width: 768px) {
