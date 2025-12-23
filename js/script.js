@@ -119,3 +119,78 @@ if (shareBtns.length > 0) {
         });
     });
 }
+
+// Reviews Slider
+const track = document.querySelector('.reviews-track');
+const slides = document.querySelectorAll('.review-slide');
+const nextButton = document.querySelector('.slider-btn.next-btn');
+const prevButton = document.querySelector('.slider-btn.prev-btn');
+
+if (track && slides.length > 0) {
+    let currentIndex = 0;
+
+    // Function to determine visible items based on window width
+    // Matches CSS media queries
+    function getVisibleItems() {
+        if (window.innerWidth >= 1024) return 3;
+        if (window.innerWidth >= 768) return 2;
+        return 1;
+    }
+
+    function updateSliderPosition() {
+        const visibleItems = getVisibleItems();
+        const slideWidth = 100 / visibleItems; // percentage width of one slide
+        const maxIndex = slides.length - visibleItems;
+
+        // Clamp index
+        if (currentIndex < 0) currentIndex = 0;
+        if (currentIndex > maxIndex) currentIndex = maxIndex;
+
+        // Move track
+        track.style.transform = `translateX(-${currentIndex * slideWidth}%)`;
+
+        // Helper to update button states
+        if (prevButton) {
+            prevButton.style.opacity = currentIndex === 0 ? '0.5' : '1';
+            prevButton.style.pointerEvents = currentIndex === 0 ? 'none' : 'auto';
+        }
+
+        if (nextButton) {
+            nextButton.style.opacity = currentIndex >= maxIndex ? '0.5' : '1';
+            nextButton.style.pointerEvents = currentIndex >= maxIndex ? 'none' : 'auto';
+        }
+    }
+
+    // Initial check
+    updateSliderPosition();
+
+    // Event Listeners
+    if (nextButton) {
+        nextButton.addEventListener('click', () => {
+            const visibleItems = getVisibleItems();
+            if (currentIndex < slides.length - visibleItems) {
+                currentIndex++;
+                updateSliderPosition();
+            }
+        });
+    }
+
+    if (prevButton) {
+        prevButton.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateSliderPosition();
+            }
+        });
+    }
+
+    // Resize listener for responsive adjustment
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+            // Re-validate index in case visible count changed
+            updateSliderPosition();
+        }, 100);
+    });
+}

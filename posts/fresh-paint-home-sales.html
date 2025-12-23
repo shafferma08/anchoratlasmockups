@@ -23,11 +23,6 @@
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <style>
-        .post-hero {
-            height: 50vh;
-            min-height: 400px;
-        }
-
         .article-container {
             max-width: 800px;
             /* Optimal reading width */
@@ -195,31 +190,30 @@
     </nav>
 
     <!-- HERO SECTION -->
-    <section class="hero post-hero">
+    <section class="hero post-hero page-hero">
         <div class="hero-bg">
             <img src="../assets/blog-images/fresh-paint.png" alt="Hero Background"
                 style="width: 100%; height: 100%; object-fit: cover; opacity: 1;">
-            <div class="hero-overlay" style="background-color: rgba(60, 74, 79, 0.4);"></div>
+            <div class="hero-overlay" style="background-color: rgba(0, 0, 0, 0.5);"></div>
         </div>
 
-        <div class="hero-inner container">
+        <div class="post-hero-content animate-on-scroll delay-100">
+            <span class="post-hero-category">Home Sales</span>
+            <h1 class="post-hero-title">Why Fresh Paint Still Rules in Home Sales</h1>
+            <div class="post-hero-meta">
+                <span>By Anchor & Atlas</span> • <span>5 Min Read</span>
+            </div>
             <a href="../blog.html" class="back-link">
-                <i data-lucide="arrow-left" width="20" height="20"></i> Back to The Compass
+                <i data-lucide="arrow-left" width="16" height="16"></i> Back to The Compass
             </a>
         </div>
     </section>
 
     <!-- ARTICLE CONTENT -->
-    <article class="article-section" style="background-color: var(--color-off-white); padding-bottom: 5rem;">
+    <article class="article-section" style="background-color: var(--color-off-white); padding-bottom: 2rem;">
         <div class="container">
             <div class="article-container animate-on-scroll">
-                <header class="article-header">
-                    <span class="article-category">Home Sales</span>
-                    <h1 class="article-title">Why Fresh Paint Still Rules in Home Sales</h1>
-                    <div style="color: var(--color-gray-600); font-size: 0.9rem;">
-                        <span>By Anchor & Atlas</span> • <span>5 Min Read</span>
-                    </div>
-                </header>
+                <!-- Header removed, moved to hero -->
 
                 <div class="article-content">
                     <p class="lead"
@@ -314,11 +308,18 @@
         </div>
     </article>
 
+    <div class="container text-center" style="margin-top: 2rem; margin-bottom: 2rem;">
+        <a href="../blog.html" class="back-link dark-mode">
+            <i data-lucide="arrow-left" width="16" height="16"></i> Back to The Compass
+        </a>
+    </div>
+
     <!-- Related Posts Section -->
     <section class="related-posts-section">
         <div class="container">
             <h3 class="font-serif text-center"
                 style="font-size: 1.5rem; color: var(--color-primary); margin-bottom: 2rem;">Related Articles</h3>
+
             <div class="related-grid" style="max-width: 60rem; margin: 0 auto;">
                 <!-- Related 1 -->
                 <article class="blog-card">
@@ -348,10 +349,6 @@
                         <a href="mission-protect-what-matters.html" class="read-more">Read Article</a>
                     </div>
                 </article>
-            </div>
-
-            <div class="text-center" style="margin-top: 3rem;">
-                <a href="../blog.html" class="btn-primary">Back to The Compass</a>
             </div>
         </div>
     </section>

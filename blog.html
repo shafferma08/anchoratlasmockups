@@ -22,11 +22,6 @@
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <style>
-        .blog-hero {
-            height: 400px;
-            /* Shorter hero */
-        }
-
         .blog-grid {
             display: grid;
             gap: 2rem;
@@ -103,21 +98,6 @@
             line-height: 1.6;
             flex-grow: 1;
         }
-
-        .read-more {
-            font-size: 0.875rem;
-            font-weight: 600;
-            color: var(--color-secondary);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.25rem;
-        }
-
-        .read-more:hover {
-            color: var(--color-primary);
-        }
     </style>
 </head>
 
@@ -174,13 +154,12 @@
     </nav>
 
     <!-- HERO SECTION -->
-    <section class="hero blog-hero">
-        <div class="hero-bg" style="background-color: var(--color-dark-slate);">
+    <section class="hero page-hero">
+        <div class="hero-bg">
             <!-- Static image for blog, darker overlay -->
             <img src="assets/hero-images/luxury-living-room.jpg" alt="Compass Banner"
-                style="width: 100%; height: 100%; object-fit: cover; opacity: 0.4;">
-            <div class="hero-overlay" style="background-color: rgba(24, 114, 125, 0.6);"></div>
-            <!-- Deep Teal Overlay -->
+                style="width: 100%; height: 100%; object-fit: cover; opacity: 1;">
+            <div class="hero-overlay"></div>
         </div>
 
         <div class="hero-content">
@@ -188,11 +167,10 @@
                 <!-- Maybe just text for this page -->
             </div>
 
-            <h1 class="font-serif animate-on-scroll delay-100" style="font-size: 3rem; margin-bottom: 1rem;">
+            <h1 class="animate-on-scroll delay-100">
                 THE COMPASS
             </h1>
-            <p class="animate-on-scroll delay-200"
-                style="font-size: 1.25rem; font-weight: 300; max-width: 40rem; margin: 0 auto;">
+            <p class="animate-on-scroll delay-200">
                 Your trusted guide for home, travel, and lifestyle insights.
             </p>
         </div>

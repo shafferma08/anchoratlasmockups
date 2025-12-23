@@ -163,6 +163,11 @@ button {
     font-style: italic;
 }
 
+.lead {
+    font-weight: 500;
+}
+
+
 /* Utilities */
 .container {
     max-width: 1280px;
@@ -368,7 +373,7 @@ button {
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .hero-content {
@@ -378,6 +383,205 @@ button {
     /* 4xl */
     padding: 0 1rem;
 }
+
+/* Page Hero (Services, Blog, etc) */
+.hero.page-hero {
+    height: 50vh;
+    min-height: 400px;
+}
+
+.hero.page-hero h1 {
+    font-family: var(--font-serif);
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero.page-hero p {
+    font-size: 1.25rem;
+    font-weight: 300;
+    max-width: 40rem;
+    margin: 0 auto;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Single Blog Post Hero Content */
+/* Single Blog Post Hero Content */
+/* Single Blog Post Hero Content */
+.post-hero-content {
+    position: relative;
+    /* Changed from absolute */
+    z-index: 20;
+    text-align: center;
+    color: white;
+    padding: 0 1rem;
+    max-width: 64rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Flex center for the page hero when it is a post hero */
+.hero.page-hero.post-hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Center vertically */
+    align-items: center;
+}
+
+/* Remove absolute positioning for this layout request */
+.hero.page-hero.post-hero .hero-inner {
+    display: none;
+    /* We will move the link inside content */
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+    padding: 0.75rem 1.5rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 9999px;
+    transition: all 0.3s;
+    text-decoration: none;
+    margin-top: 2rem;
+    /* Space from meta */
+}
+
+.back-link:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+    color: white;
+    text-decoration: none;
+}
+
+/* Dark version for footer area */
+.back-link.dark-mode {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    color: white;
+}
+
+.back-link.dark-mode:hover {
+    background-color: var(--color-dark-slate);
+    border-color: var(--color-dark-slate);
+}
+
+.post-hero-category {
+    color: var(--color-secondary);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin-bottom: 1rem;
+    display: block;
+    font-size: 0.875rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.post-hero-title {
+    font-family: var(--font-serif);
+    font-size: 2.5rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    max-width: 60rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.post-hero-meta {
+    font-size: 1rem;
+    opacity: 1;
+    font-weight: 500;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+}
+
+/* Related Posts Revamp */
+.related-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .related-grid {
+        grid-template-columns: 1fr 1fr;
+        /* 2 equal columns */
+        gap: 3rem;
+    }
+}
+
+.related-grid .blog-card {
+    /* Override for related section to look more premium */
+    border: none;
+    box-shadow: none;
+    background: transparent;
+}
+
+
+.related-grid .blog-card-img {
+    height: 500px;
+    width: 100%;
+    object-fit: cover;
+    /* Prevent stretching */
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* Update Read More Link to be button-like */
+.read-more {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--color-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    border: 2px solid var(--color-secondary);
+    padding: 0.5rem 1.25rem;
+    border-radius: 9999px;
+    transition: all 0.3s;
+    margin-top: 1rem;
+    align-self: center;
+    width: fit-content;
+}
+
+.read-more:hover {
+    background-color: var(--color-secondary);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.related-grid .blog-card-content {
+    padding: 1.5rem 0;
+    /* Remove horizontal padding */
+}
+
+.related-grid .blog-title {
+    font-size: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .post-hero-title {
+        font-size: 3rem;
+    }
+}
+
 
 .hero h1 {
     font-size: 2.25rem;
@@ -426,7 +630,7 @@ button {
     margin-bottom: 2rem;
     /* Matches the gap above */
     letter-spacing: 0.1em;
-    font-weight: 400;
+    font-weight: 600;
 }
 
 @media (min-width: 768px) {
@@ -902,6 +1106,8 @@ button {
     transition: all 0.4s ease;
 }
 
+
+
 /* Post Navigation */
 .post-navigation {
     display: flex;
@@ -1006,13 +1212,48 @@ button {
     border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-.reviews-grid {
+/* Reviews Slider */
+.reviews-slider-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    max-width: 90rem;
+    margin: 0 auto;
+    padding: 0 0.5rem;
+}
+
+.reviews-track-container {
+    overflow: hidden;
+    width: 100%;
+    margin: 0 1rem;
+    /* Masking for smooth edges check */
+}
+
+.reviews-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.review-slide {
+    flex: 0 0 100%;
+    padding: 1rem;
+    box-sizing: border-box;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 2rem;
-    max-width: 72rem;
-    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .review-slide {
+        flex: 0 0 50%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .review-slide {
+        flex: 0 0 33.333%;
+    }
 }
 
 .review-card {
@@ -1025,11 +1266,9 @@ button {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100%;
-    flex: 1 1 300px;
-    /* Grow, Shrink, Basis */
-    max-width: 32rem;
-    /* Prevent them from getting too wide in a row of 2 */
+    width: 100%;
+    height: 450px;
+    /* Fixed height for uniformity */
 }
 
 .review-card:hover {
@@ -1042,35 +1281,44 @@ button {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     border-bottom: 1px solid var(--color-gray-100);
-    padding-bottom: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+.review-body {
+    flex-grow: 1;
+    overflow-y: auto;
+    margin-bottom: 1.5rem;
+    padding-right: 0.5rem;
+}
+
+/* Custom scrollbar for review body */
+.review-body::-webkit-scrollbar {
+    width: 4px;
+}
+
+.review-body::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.review-body::-webkit-scrollbar-thumb {
+    background: var(--color-gray-300);
+    border-radius: 4px;
 }
 
 .stars {
     color: var(--color-secondary);
-    /* Gold */
     letter-spacing: 2px;
     font-size: 1.125rem;
-}
-
-.review-source {
-    font-size: 0.75rem;
-    color: var(--color-gray-600);
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    gap: 0.25rem;
 }
 
 .review-text {
     font-style: italic;
     color: var(--color-gray-700);
-    line-height: 1.8;
-    margin-bottom: 1.5rem;
+    line-height: 1.7;
     font-family: var(--font-sans);
-    /* Switched to sans for readability */
-    font-size: 1rem;
+    font-size: 0.95rem;
 }
 
 .review-author {
@@ -1079,7 +1327,36 @@ button {
     font-size: 0.875rem;
     letter-spacing: 0.05em;
     text-align: right;
-    /* Sign-off style */
+    margin-top: auto;
+    /* Ensure it sticks to bottom if needed, though flex handles it */
+}
+
+.slider-btn {
+    background: white;
+    border: 1px solid var(--color-gray-300);
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s;
+    color: var(--color-primary);
+    flex-shrink: 0;
+    z-index: 10;
+}
+
+.slider-btn:hover {
+    background-color: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary);
+    transform: scale(1.1);
+}
+
+.slider-btn:active {
+    transform: scale(0.95);
 }
 
 /* Reviews CTA */
@@ -1095,6 +1372,31 @@ button {
     margin-right: auto;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.reviews-cta::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -20%;
+    width: 140%;
+    height: 200%;
+    background-image: url('../assets/img/key-logo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: 0.05;
+    pointer-events: none;
+    transform: rotate(0deg);
+}
+
+.reviews-cta h3,
+.reviews-cta p,
+.reviews-cta a {
+    position: relative;
+    z-index: 1;
 }
 
 .reviews-cta h3 {
