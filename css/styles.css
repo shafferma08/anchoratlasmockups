@@ -249,6 +249,24 @@ button {
     font-weight: 700;
     color: var(--color-pale-gold);
     letter-spacing: -0.05em;
+    display: flex;
+    /* Added for alignment */
+    align-items: center;
+    /* Vertically center */
+}
+
+.logo a {
+    display: flex;
+    /* Ensure anchor also centers img */
+    align-items: center;
+}
+
+.logo img {
+    transition: transform 0.3s ease;
+}
+
+.logo a:hover img {
+    transform: scale(1.1);
 }
 
 .desktop-menu {
@@ -266,6 +284,15 @@ button {
     padding-left: 1rem;
     margin-left: 1rem;
     border-left: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.social-icons a {
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-icons a:hover {
+    color: var(--color-light-teal) !important;
+    transform: translateY(-2px);
 }
 
 .mobile-menu-btn {
@@ -683,8 +710,8 @@ button {
     background-color: var(--color-off-white);
     padding: 5rem 1rem;
     text-align: center;
-    border-bottom: 5px solid var(--color-light-teal);
-    /* Added accent border */
+    border-bottom: none;
+    /* Removed to prevent double border with next section */
 }
 
 .section-subtitle {
@@ -806,6 +833,8 @@ button {
 .meet-wendy {
     padding: 5rem 1rem;
     background-color: white;
+    border-top: 5px solid var(--color-light-teal);
+    /* Consistent blue border */
 }
 
 .wendy-grid {
@@ -842,7 +871,7 @@ button {
     height: auto;
     background: white;
     overflow: hidden;
-    border: 4px solid var(--color-gray-100);
+    /* border: 4px solid var(--color-gray-100); - Removed per request */
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
     margin: 0 auto;
 }
@@ -864,7 +893,12 @@ button {
     max-width: 64rem;
     margin: 0 auto;
     padding: 3rem;
-    border-radius: 0.125rem;
+    border-radius: 0.5rem;
+    /* Updated to match service-cta-box */
+    border-left: 6px solid var(--color-primary);
+    /* Added Accent Border */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    /* Added Shadow */
 }
 
 .credentials-grid {
@@ -1221,9 +1255,18 @@ button {
 .reviews-section {
     background-color: var(--color-bg-light);
     /* Light Cream/Off-white */
-    padding: 6rem 1rem;
+    padding: 6rem 0;
+    /* Remove horizontal padding on mobile to allow full bleed */
     position: relative;
-    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    border-top: 5px solid var(--color-light-teal);
+    /* Consistent blue border */
+}
+
+@media (min-width: 768px) {
+    .reviews-section {
+        padding: 6rem 1rem;
+        /* Restore padding on desktop */
+    }
 }
 
 /* Reviews Slider */
@@ -1233,26 +1276,50 @@ button {
     justify-content: center;
     position: relative;
     max-width: 90rem;
-    margin: 0 auto;
-    padding: 0 0.5rem;
+    margin: 0 -1rem;
+    /* Negative margin to potential break container padding */
+    width: calc(100% + 2rem);
+    /* Force width to exceed container */
+    padding: 0;
+}
+
+@media (min-width: 768px) {
+    .reviews-slider-wrapper {
+        margin: 0 auto;
+        width: auto;
+        padding: 0 1rem;
+    }
 }
 
 .reviews-track-container {
-    overflow: hidden;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
     width: 100%;
     margin: 0;
-    /* Removed mobile margin */
-    /* Masking for smooth edges check */
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE */
+    scroll-behavior: smooth;
+    padding-bottom: 1rem;
+    /* Space for shadow */
+}
+
+/* Hide scrollbar */
+.reviews-track-container::-webkit-scrollbar {
+    display: none;
 }
 
 .reviews-track {
     display: flex;
-    transition: transform 0.5s ease-in-out;
     width: 100%;
+    /* No transform */
 }
 
 .review-slide {
-    flex: 0 0 100%;
+    flex: 0 0 90%;
+    /* Mobile: 90% of Viewport (Breakout) */
+    scroll-snap-align: center;
     padding: 0.5rem;
     box-sizing: border-box;
     display: flex;
@@ -1264,27 +1331,31 @@ button {
         margin: 0 1rem;
     }
 
-}
-
-@media (min-width: 768px) {
     .review-slide {
         flex: 0 0 50%;
+        /* Tablet: 2 items */
+        padding: 1rem;
+        /* More space on larger screens */
+        scroll-snap-align: start;
     }
 }
 
 @media (min-width: 1024px) {
     .review-slide {
         flex: 0 0 33.333%;
+        /* Desktop: 3 items */
     }
 }
 
 .review-card {
     background-color: white;
-    padding: 2rem;
+    padding: 1.5rem;
+    /* Reduced padding for mobile */
     border-radius: 0.5rem;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
     transition: all 0.3s;
-    border: 1px solid transparent;
+    border: 2px solid var(--color-light-teal);
+    /* Persistent blue outline */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -1293,10 +1364,18 @@ button {
     /* Fixed height for uniformity */
 }
 
+@media (min-width: 768px) {
+    .review-card {
+        padding: 2rem;
+        /* Standard padding desktop */
+    }
+}
+
 .review-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-    border-color: var(--color-light-teal);
+    border-color: var(--color-primary);
+    /* Darker seal on hover */
 }
 
 .review-header {
@@ -1447,6 +1526,7 @@ button {
 .highlight-link:hover {
     color: var(--color-white) !important;
     border-color: var(--color-white) !important;
+    text-decoration: none !important;
 }
 
 .service-cta-box {
@@ -1457,4 +1537,69 @@ button {
     margin: 4rem auto 2rem;
     max-width: 56rem;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Parallax Break Section */
+.parallax-section {
+    background-image: url('../assets/hero-images/luxury-outdoor-patio.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 8rem 1rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    border-top: 5px solid var(--color-light-teal);
+    /* Added Top Border */
+}
+
+.parallax-section.reviews-bg {
+    background-image: url('../assets/hero-images/luxury-living-room.jpg');
+}
+
+/* Mobile fallback for fixed attachment */
+@media (max-width: 768px) {
+    .parallax-section {
+        background-attachment: scroll;
+    }
+}
+
+.parallax-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(24, 114, 125, 0.7);
+    /* Deep Teal Overlay */
+}
+
+.parallax-content {
+    position: relative;
+    z-index: 10;
+    max-width: 56rem;
+}
+
+/* Modern Watermark Background */
+.watermark-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.watermark-bg {
+    position: absolute;
+    top: -10%;
+    right: -10%;
+    width: 60%;
+    height: 120%;
+    background-image: url('../assets/img/key-logo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: 0.03;
+    /* Very subtle */
+    pointer-events: none;
+    transform: rotate(15deg);
+    z-index: 0;
 }
