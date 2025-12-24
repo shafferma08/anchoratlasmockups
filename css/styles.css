@@ -169,6 +169,18 @@ button {
 
 
 /* Utilities */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
 .container {
     max-width: 1280px;
     /* max-w-7xl */
@@ -368,6 +380,10 @@ button {
     opacity: 0;
     animation: slideshow 24s infinite;
     /* 4 images * 6s each */
+}
+
+.hero-bg:hover .hero-slide {
+    animation-play-state: paused;
 }
 
 @keyframes slideshow {
