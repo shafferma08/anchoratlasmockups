@@ -8,6 +8,31 @@ const mobileMenu = document.querySelector('.mobile-menu');
 if (mobileMenuBtn) {
     mobileMenuBtn.addEventListener('click', () => {
         mobileMenu.classList.toggle('active');
+        const menuIcon = mobileMenuBtn.querySelector('.menu-icon');
+        const closeIcon = mobileMenuBtn.querySelector('.close-icon');
+
+        if (mobileMenu.classList.contains('active')) {
+            menuIcon.style.display = 'none';
+            closeIcon.style.display = 'block';
+        } else {
+            menuIcon.style.display = 'block';
+            closeIcon.style.display = 'none';
+        }
+    });
+
+    // Close menu when a link is clicked
+    const mobileLinks = mobileMenu.querySelectorAll('a');
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            // Reset icons
+            const menuIcon = mobileMenuBtn.querySelector('.menu-icon');
+            const closeIcon = mobileMenuBtn.querySelector('.close-icon');
+            if (menuIcon && closeIcon) {
+                menuIcon.style.display = 'block';
+                closeIcon.style.display = 'none';
+            }
+        });
     });
 }
 
