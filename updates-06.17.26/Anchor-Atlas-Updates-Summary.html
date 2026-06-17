@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Anchor &amp; Atlas — Website Updates Completed</title>
+<style>
+  :root{
+    --ink:#1b1f24;
+    --gold:#a9772f;
+    --gold-soft:#c79a4f;
+    --muted:#6b7280;
+    --line:#e3e0da;
+    --panel:#f7f5f1;
+  }
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; }
+  body{
+    font-family:"Segoe UI", Helvetica, Arial, sans-serif;
+    color:var(--ink);
+    font-size:11pt;
+    line-height:1.55;
+    -webkit-print-color-adjust:exact;
+    print-color-adjust:exact;
+  }
+  @page{ size:Letter; margin:18mm 16mm 16mm 16mm; }
+
+  /* ---- Masthead ---- */
+  .masthead{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    border-bottom:2px solid var(--ink);
+    padding-bottom:10px;
+    margin-bottom:26px;
+  }
+  .wordmark{
+    font-size:19pt;
+    font-weight:700;
+    letter-spacing:0.42em;
+    text-transform:uppercase;
+    margin:0;
+  }
+  .wordmark .top{ color:var(--ink); }
+  .wordmark .studio{ color:var(--gold); }
+  .tagline{
+    font-size:7.5pt;
+    letter-spacing:0.34em;
+    text-transform:uppercase;
+    color:var(--muted);
+    margin-top:4px;
+  }
+  .masthead .right{
+    text-align:right;
+    font-size:7.5pt;
+    letter-spacing:0.22em;
+    text-transform:uppercase;
+    color:var(--muted);
+    line-height:1.8;
+  }
+
+  /* ---- Title block ---- */
+  .doc-kicker{
+    font-size:8.5pt;
+    letter-spacing:0.3em;
+    text-transform:uppercase;
+    color:var(--gold);
+    font-weight:600;
+    margin-bottom:6px;
+  }
+  h1{
+    font-size:25pt;
+    line-height:1.12;
+    margin:0 0 18px;
+    font-weight:700;
+    letter-spacing:-0.01em;
+  }
+  .meta{
+    display:flex;
+    gap:38px;
+    padding:14px 0 0;
+    border-top:1px solid var(--line);
+    margin-bottom:8px;
+  }
+  .meta .item .label{
+    font-size:7pt; letter-spacing:0.24em; text-transform:uppercase; color:var(--muted);
+  }
+  .meta .item .val{ font-size:10.5pt; font-weight:600; margin-top:2px; }
+
+  .intro{
+    color:#41464e;
+    font-size:10.5pt;
+    margin:18px 0 30px;
+    max-width:none;
+  }
+  .intro strong{ color:var(--ink); }
+
+  /* ---- Sections ---- */
+  section{ margin-bottom:24px; break-inside:avoid; }
+  h2{
+    font-size:12.5pt;
+    text-transform:uppercase;
+    letter-spacing:0.12em;
+    margin:0 0 12px;
+    padding-bottom:7px;
+    border-bottom:1px solid var(--line);
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  h2::before{
+    content:"";
+    width:14px; height:3px; background:var(--gold); display:inline-block; border-radius:2px;
+  }
+  ul.checks{ list-style:none; margin:0; padding:0; }
+  ul.checks li{
+    position:relative;
+    padding:5px 0 5px 26px;
+    border-bottom:1px solid #f0eee9;
+    font-size:10.5pt;
+  }
+  ul.checks li:last-child{ border-bottom:none; }
+  ul.checks li::before{
+    content:"\2713";
+    position:absolute; left:0; top:5px;
+    color:var(--gold);
+    font-weight:700;
+    font-size:11pt;
+  }
+  ul.checks li strong{ color:var(--ink); }
+  ul.checks li .sub{ color:var(--muted); }
+
+  /* ---- Decisions panel ---- */
+  .panel{
+    background:var(--panel);
+    border-left:3px solid var(--gold);
+    padding:18px 22px;
+    margin-bottom:24px;
+    break-inside:avoid;
+  }
+  .panel h2{ border:none; padding:0; margin-bottom:10px; }
+  .panel ol{ margin:0; padding-left:18px; }
+  .panel ol li{ margin-bottom:10px; font-size:10.5pt; }
+  .panel ol li:last-child{ margin-bottom:0; }
+  .panel ol li strong{ color:var(--ink); }
+
+  .closing{
+    font-size:10pt;
+    color:#41464e;
+    border-top:1px solid var(--line);
+    padding-top:16px;
+    margin-top:6px;
+  }
+
+  /* ---- Footer ---- */
+  .footer{
+    margin-top:34px;
+    padding-top:12px;
+    border-top:2px solid var(--ink);
+    display:flex;
+    justify-content:space-between;
+    font-size:7.5pt;
+    letter-spacing:0.22em;
+    text-transform:uppercase;
+    color:var(--muted);
+  }
+  .footer .fw{ font-weight:700; color:var(--ink); letter-spacing:0.34em; }
+</style>
+</head>
+<body>
+
+  <div class="masthead">
+    <div>
+      <p class="wordmark"><span class="top">UP TOP</span> <span class="studio">STUDIO</span></p>
+      <div class="tagline">Web &middot; Brand &middot; Digital</div>
+    </div>
+    <div class="right">
+      Project Deliverable<br>
+      Website Update Report
+    </div>
+  </div>
+
+  <div class="doc-kicker">Completed Work Summary</div>
+  <h1>Anchor &amp; Atlas, LLC<br>Website Updates</h1>
+
+  <div class="meta">
+    <div class="item"><div class="label">Prepared For</div><div class="val">Wendy Bailey Chaves</div></div>
+    <div class="item"><div class="label">Date</div><div class="val">June 17, 2026</div></div>
+    <div class="item"><div class="label">Prepared By</div><div class="val">Up Top Studio</div></div>
+  </div>
+
+  <p class="intro">
+    This report summarizes the website changes completed from your marked-up screenshots and your June&nbsp;16 email.
+    Going forward, the site now focuses on <strong>real estate agents and seniors</strong>, and the personal/family
+    lifestyle wording has been retired throughout.
+  </p>
+
+  <section>
+    <h2>Homepage</h2>
+    <ul class="checks">
+      <li><strong>Hero image</strong> &mdash; now uses your actual staging photos.</li>
+      <li><strong>Headline</strong> updated to <em>&ldquo;Thoughtfully Curated Real Estate Solutions.&rdquo;</em></li>
+      <li><strong>Services header</strong> updated to <em>&ldquo;Elevated Real Estate Agent Concierge &amp; Senior Transition Services.&rdquo;</em></li>
+      <li><strong>Intro paragraph</strong> rewritten to remove the &ldquo;white-glove&rdquo; and &ldquo;lifestyle management&rdquo; wording.</li>
+      <li><strong>&ldquo;Personal Family Lifestyle Management &amp; Business Concierge&rdquo; card</strong> deleted.</li>
+      <li><strong>Heart-icon card</strong> renamed to <em>&ldquo;Senior Concierge, Companionship &amp; Transition Services.&rdquo;</em></li>
+      <li><strong>Reviews / testimonials section</strong> &mdash; live, featuring your 6 Google reviews.</li>
+      <li><strong>Phone number</strong> updated to <strong>(304)&nbsp;552-5501</strong>; old number removed.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Real Estate Agent Concierge Page</h2>
+    <ul class="checks">
+      <li>Added <strong>Exterior Staging &amp; Preparation</strong> <span class="sub">&mdash; First impressions matter.</span></li>
+      <li>Added <strong>Decluttering &amp; Organizing</strong>.</li>
+      <li>Trimmed the <strong>Home Watch</strong> bullet to end at &ldquo;safety.&rdquo;</li>
+      <li>Added <strong>Curb Appeal Enhancements</strong> <span class="sub">&mdash; pool, patio &amp; landscape refresh services.</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Senior Concierge &amp; Companionship Page</h2>
+    <ul class="checks">
+      <li>Page title updated to include <strong>&ldquo;Transition&rdquo;</strong> <span class="sub">(Senior Concierge, Companionship &amp; Transition Services).</span></li>
+      <li>Removed <strong>Daily Check-Ins</strong>, <strong>Meal Prep Assistance</strong>, and <strong>Home Repair Coordination</strong>.</li>
+      <li>Added a new <strong>Transition Assistance</strong> section: <span class="sub">Decluttering &amp; Organizing &middot; Contractor &amp; Repair Oversight &middot; Estate Sale Services &middot; Home Staging + Comprehensive Real Estate Services &middot; Transition Assistance for Senior Living &middot; Family Communication Liaison for out-of-state family &amp; care providers.</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>About &mdash; Wendy Bailey Chaves</h2>
+    <ul class="checks">
+      <li><strong>Bio</strong> replaced with your new write-up.</li>
+      <li>Added <strong>Senior Real Estate Specialist</strong> and <strong>Certified Staging Advocate</strong> to your credentials.</li>
+      <li>Added the <strong>&reg;/&trade; trademark symbols</strong> to REALTOR&reg;, SRES&reg;, and CSA&trade;.</li>
+      <li>Cleaned up the <strong>duplicated &ldquo;Mission:&rdquo; line</strong> and added your mission statement.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Across the Whole Site</h2>
+    <ul class="checks">
+      <li>New <strong>mission statement</strong> now appears in the footer of every page.</li>
+      <li>Removed &ldquo;lifestyle management&rdquo; wording from page descriptions and behind-the-scenes search-engine data, so the site reads as <strong>agents&nbsp;+&nbsp;seniors</strong> focused.</li>
+    </ul>
+  </section>
+
+  <div class="panel">
+    <h2>A Few Decisions We Made for You</h2>
+    <ol>
+      <li><strong>&ldquo;White-glove&rdquo; wording.</strong> Removed from the homepage and page descriptions, but <strong>kept in your bio</strong> since you used that phrasing in the write-up you provided &mdash; there it reads as a description of service quality, not the retired service line.</li>
+      <li><strong>Lifestyle / Business Concierge section.</strong> Your markup only crossed out the homepage card, but since your email confirmed the agents-and-seniors focus, we <strong>removed the full &ldquo;Personal &amp; Business Concierge&rdquo; section</strong> from the services page as well, along with its menu link. Let us know if you&rsquo;d like any of that content preserved elsewhere.</li>
+      <li><strong>Older blog post tag.</strong> One blog post was tagged &ldquo;Lifestyle Management&rdquo;; we changed it to <strong>&ldquo;Concierge Services&rdquo;</strong> to stay on-brand.</li>
+    </ol>
+  </div>
+
+  <p class="closing">
+    No new testimonials were needed &mdash; the homepage already features your 6 Google reviews. <strong>All changes
+    above are now live on the site.</strong> If anything doesn&rsquo;t match what you had in mind, just flag the item and
+    we&rsquo;ll adjust.
+  </p>
+
+  <div class="footer">
+    <span class="fw">UP TOP STUDIO</span>
+    <span>Anchor &amp; Atlas &middot; Website Update Report &middot; June 2026</span>
+  </div>
+
+</body>
+</html>
