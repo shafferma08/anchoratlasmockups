@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Users/mshaf/AppData/Local/Temp/aa_thumbs/**)",
+      "Bash(git rm *)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless=new --disable-gpu --no-pdf-header-footer --print-to-pdf=\"Anchor-Atlas-Updates-Summary.pdf\" \"file:///H:/My%20Drive/anchor-and-atlas/anchoratlasmockups/updates-06.17.26/Anchor-Atlas-Updates-Summary.html\")",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless=new --disable-gpu --no-sandbox --user-data-dir=\"/c/Users/mshaf/AppData/Local/Temp/chrome-pdf-profile\" --no-pdf-header-footer --print-to-pdf=\"C:/Users/mshaf/AppData/Local/Temp/aa-summary.pdf\" \"file:///H:/My%20Drive/anchor-and-atlas/anchoratlasmockups/updates-06.17.26/Anchor-Atlas-Updates-Summary.html\")",
+      "Bash(git commit -q -m ' *)",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless=new --disable-gpu --no-sandbox --user-data-dir=\"/c/Users/mshaf/AppData/Local/Temp/chrome-pdf-profile\" --hide-scrollbars --window-size=1440,3200 --screenshot=\"C:/Users/mshaf/AppData/Local/Temp/home-desktop.png\" \"file:///H:/My%20Drive/anchor-and-atlas/anchoratlasmockups/index.html\")",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless=new --disable-gpu --no-sandbox --user-data-dir=\"/c/Users/mshaf/AppData/Local/Temp/chrome-pdf-profile\" --hide-scrollbars --window-size=1440,1300 --virtual-time-budget=3500 --run-all-compositor-stages-before-draw --screenshot=\"C:/Users/mshaf/AppData/Local/Temp/home-fixed.png\" \"file:///H:/My%20Drive/anchor-and-atlas/anchoratlasmockups/index.html\")",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless=new --disable-gpu --no-sandbox --user-data-dir=\"/c/Users/mshaf/AppData/Local/Temp/chrome-pdf-profile\" --hide-scrollbars --window-size=1440,1750 --virtual-time-budget=3500 --run-all-compositor-stages-before-draw --screenshot=\"C:/Users/mshaf/AppData/Local/Temp/home-cards.png\" \"file:///H:/My%20Drive/anchor-and-atlas/anchoratlasmockups/index.html\")",
+      "mcp__claude_ai_Google_Drive__create_file",
+      "Bash('/c/Program Files/Google/Chrome/Application/chrome.exe' --headless=new --disable-gpu --no-sandbox --user-data-dir=/c/Users/mshaf/AppData/Local/Temp/chrome-pdf-profile --hide-scrollbars --window-size=390,8000 --virtual-time-budget=4000 --run-all-compositor-stages-before-draw --screenshot=C:/Users/mshaf/AppData/Local/Temp/rv-index-m.png file:///H:/My%20Drive/anchor-and-atlas/anchoratlasmockups/index.html)",
+      "Bash('/c/Program Files/Google/Chrome/Application/chrome.exe' --headless=new --disable-gpu --no-sandbox --user-data-dir=/c/Users/mshaf/AppData/Local/Temp/chrome-pdf-profile --hide-scrollbars --window-size=1440,1150 --virtual-time-budget=4000 --run-all-compositor-stages-before-draw --screenshot=C:/Users/mshaf/AppData/Local/Temp/rv-wendy-d.png 'file:///H:/My%20Drive/anchor-and-atlas/anchoratlasmockups/index.html#meet-wendy')"
+    ]
+  }
+}
