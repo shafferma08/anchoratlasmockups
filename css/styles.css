@@ -761,15 +761,14 @@ button {
 .services-grid {
     display: grid;
     gap: 2rem;
-    max-width: 72rem;
-    /* 6xl */
+    max-width: 52rem;
+    /* sized for two cards now that the lifestyle card is removed */
     margin: 3rem auto 0;
 }
 
 @media (min-width: 768px) {
     .services-grid {
-        grid-template-columns: repeat(3, 1fr);
-        /* align-items: stretch; Default */
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
