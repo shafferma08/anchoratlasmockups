@@ -18,10 +18,16 @@ Key direction from Wendy's email (Jun 16, 2026): **going forward she focuses on 
 
 **GOTCHA:** PowerShell 5.1 `Get-Content`/`Set-Content -Encoding utf8` corrupted UTF-8 (curly quotes/dashes → mojibake, plus added BOM) in 8 HTML files. Already FIXED via Windows-1252→UTF-8 reverse-transcode. For future bulk edits use `[System.IO.File]::ReadAllText/WriteAllText` with `UTF8Encoding($false)`, never Get/Set-Content.
 
-**REMAINING:**
-1. Replace homepage Meet Wendy bio with new text from Scan PDF page 4; add Mission statement and remove the duplicated trailing "Mission:" (that's the "duplicated Mission line" punch item).
-2. Credentials box (index.html): add "Senior Real Estate Specialist" + "Certified Staging Advocate" to Professional Experience (per scan p5).
-3. DECISION NEEDED: remove the "Personal & Business Concierge" (#lifestyle) section from services.html + its sub-nav link, given the agents+seniors-only focus? Punch list only deleted the homepage card, so confirm before deleting the whole section.
-4. Optional: update footer "Our Mission" sitewide to the new mission; scrub remaining "white-glove"/"lifestyle management" from meta descriptions + JSON-LD.
+**DONE (second pass, Jun 17 2026 — uncommitted, in working tree):**
+1. Meet Wendy bio (index.html) replaced with new copy from Scan p4; added **Mission** statement after the designation block. Note: Wendy's own bio copy intentionally KEEPS "white-glove approach to service" (per Marianne's call) — white-glove only scrubbed elsewhere, not the bio.
+2. Credentials box: added "Senior Real Estate Specialist" + "Certified Staging Advocate" to Professional Experience column.
+3. Deleted the whole "Personal & Business Concierge" (#lifestyle) section from services.html + its sub-nav link + the "Lifestyle Management" JSON-LD Offer (agents+seniors-only focus, confirmed by Wendy's email). Renumbered Senior block to Category 2.
+4. New mission swapped into footer "Our Mission" SITEWIDE (index, services, blog, contact, 404, all 3 posts). Scrubbed "white-glove"/"lifestyle management" from index + services + contact meta descriptions and JSON-LD descriptions. Homepage intro was already de-white-gloved in the first pass.
 
-Nothing committed yet — user reviews working tree first.
+**EDITORIAL ITEMS — RESOLVED (Marianne said "go with expert opinion"):**
+- contact.html FAQ "truly personalized, white-glove service with a unique specialization in real estate concierge support" — KEPT intentionally (service-quality descriptor, consistent with keeping white-glove in the bio). No lifestyle reference, so on-brand.
+- posts/mission-protect-what-matters.html: "Lifestyle Management" article tag → retagged to "Concierge Services". Body phrase "flex to meet your lifestyle" left as-is (generic English, not the service line).
+- Deleted stale scaffolding files SEO_FAQ_SNIPPET.html + SEO_SERVICE_AREAS_SNIPPET.html (one-time "INSERT THIS AFTER..." snippets already pasted into live pages; not served, still carried old wording). Removed via git rm — deletions staged.
+- Punch list "Add a Reviews / testimonials section" — ALREADY DONE: homepage has a full reviews slider (index.html ~386-593) with 6 real Google reviews (Crystal Peeples, Angela Laggner, Mary Marks, Alex Clark, Melissa Kent, Adi Ulaj); JSON-LD reviewCount "6". Wendy provided NO new review text — nothing to add.
+
+All edits used &rsquo;/&mdash; HTML entities (not raw UTF-8) via the Edit tool — no mojibake risk. Nothing committed yet — Marianne reviews working tree first.
