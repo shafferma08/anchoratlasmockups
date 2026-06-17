@@ -220,7 +220,7 @@ Premier white-glove concierge and lifestyle management in Pinellas County. We pr
 
 **Recommended (more specific locations):**
 ```
-White-glove concierge services in Clearwater, St. Petersburg, Dunedin & Pinellas County. Real estate concierge, senior companionship, lifestyle management. Call (727) 542-3302.
+White-glove concierge services in Clearwater, St. Petersburg, Dunedin & Pinellas County. Real estate concierge, senior companionship, lifestyle management. Call (304) 552-5501.
 ```
 
 #### 3. **Add Location-Specific Content Sections**
@@ -252,7 +252,7 @@ Add **LocalBusiness** schema with more specific location data:
   "@type": "LocalBusiness",
   "name": "Anchor & Atlas, LLC",
   "description": "White-glove concierge and lifestyle management services",
-  "telephone": "(727) 542-3302",
+  "telephone": "(304) 552-5501",
   "email": "anchorandatlasusa@gmail.com",
   "url": "https://www.anchorandatlas.com",
   "areaServed": [

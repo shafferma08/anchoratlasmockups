@@ -24,7 +24,7 @@ We specialize in:
 
 Led by Wendy Bailey Chaves with 35 years of experience in hospitality, event planning, property management, and real estate. We give you the gift of time through expert support and dependable service.
 
-Call (727) 542-3302 or visit www.anchorandatlas.com
+Call (304) 552-5501 or visit www.anchorandatlas.com
 ```
 
 **Character Count:** 750 (Google allows up to 750)
@@ -117,7 +117,7 @@ We handle:
 
 Serving Clearwater, St. Pete, Dunedin & all of Pinellas County.
 
-📞 (727) 542-3302
+📞 (304) 552-5501
 🌐 www.anchorandatlas.com
 
 #ClearwaterFL #RealEstateConcierge #HomeStaging #PinellasCounty
@@ -135,7 +135,7 @@ Protect your Pinellas County home before the storm hits. We offer:
 
 Don't wait until it's too late!
 
-📞 (727) 542-3302
+📞 (304) 552-5501
 
 #HurricanePrep #ClearwaterFL #PinellasCounty #StormReady
 ```
@@ -148,7 +148,7 @@ Don't wait until it's too late!
 
 Experience white-glove concierge service for your next move.
 
-📞 (727) 542-3302
+📞 (304) 552-5501
 🌐 www.anchorandatlas.com
 
 #ClientTestimonial #MovingServices #ClearwaterFL
@@ -166,7 +166,7 @@ Experience white-glove concierge service for your next move.
 
 Need help? Our real estate concierge services include full home staging.
 
-📞 (727) 542-3302
+📞 (304) 552-5501
 
 #HomeStagingTips #ClearwaterRealEstate #PinellasCounty
 ```
@@ -184,7 +184,7 @@ Need help? Our real estate concierge services include full home staging.
 
 ### **Question 1:**
 **Q:** Do you serve Clearwater?
-**A:** Yes! We provide concierge services throughout Clearwater, Clearwater Beach, St. Petersburg, Dunedin, Palm Harbor, Largo, Safety Harbor, Tarpon Springs, and all of Pinellas County. Call (727) 542-3302 to discuss your needs.
+**A:** Yes! We provide concierge services throughout Clearwater, Clearwater Beach, St. Petersburg, Dunedin, Palm Harbor, Largo, Safety Harbor, Tarpon Springs, and all of Pinellas County. Call (304) 552-5501 to discuss your needs.
 
 ### **Question 2:**
 **Q:** What's the difference between your service and senior care?
@@ -196,7 +196,7 @@ Need help? Our real estate concierge services include full home staging.
 
 ### **Question 4:**
 **Q:** How much do your services cost?
-**A:** Our pricing is customized based on your specific needs. We offer flexible packages for one-time projects or ongoing support. Contact us at (727) 542-3302 for a complimentary consultation and personalized quote.
+**A:** Our pricing is customized based on your specific needs. We offer flexible packages for one-time projects or ongoing support. Contact us at (304) 552-5501 for a complimentary consultation and personalized quote.
 
 ### **Question 5:**
 **Q:** What areas do you serve?
@@ -204,7 +204,7 @@ Need help? Our real estate concierge services include full home staging.
 
 ### **Question 6:**
 **Q:** Are you available for emergencies?
-**A:** We work by appointment to ensure we can give each client our full attention. For urgent needs, please call (727) 542-3302 and we'll do our best to accommodate your timeline.
+**A:** We work by appointment to ensure we can give each client our full attention. For urgent needs, please call (304) 552-5501 and we'll do our best to accommodate your timeline.
 
 ### **Question 7:**
 **Q:** Do you offer gift certificates?
@@ -242,7 +242,7 @@ Thank you so much for your time and for being a valued client!
 Warm regards,
 Wendy Bailey Chaves
 Anchor & Atlas, LLC
-(727) 542-3302
+(304) 552-5501
 www.anchorandatlas.com
 ```
 
@@ -270,14 +270,14 @@ Thank you so much, [Name]! We're thrilled we could help with [specific service].
 
 **For 4-Star Reviews:**
 ```
-Thank you for your feedback, [Name]! We're glad we could assist with [specific service]. We're always looking to improve - if there's anything we could have done better, please don't hesitate to reach out directly at (727) 542-3302.
+Thank you for your feedback, [Name]! We're glad we could assist with [specific service]. We're always looking to improve - if there's anything we could have done better, please don't hesitate to reach out directly at (304) 552-5501.
 
 - Wendy Bailey Chaves, Anchor & Atlas
 ```
 
 **For 3-Star or Below:**
 ```
-Thank you for taking the time to share your experience, [Name]. I'm sorry we didn't fully meet your expectations. I'd love to discuss this further and see how we can make it right. Please call me directly at (727) 542-3302.
+Thank you for taking the time to share your experience, [Name]. I'm sorry we didn't fully meet your expectations. I'd love to discuss this further and see how we can make it right. Please call me directly at (304) 552-5501.
 
 - Wendy Bailey Chaves, Anchor & Atlas
 ```
