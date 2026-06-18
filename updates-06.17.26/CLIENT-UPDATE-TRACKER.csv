@@ -1,0 +1,6 @@
+Date,Batch,Scope of work,Files / area,Est. hours,Rate,Suggested charge,Client-facing summary,Status
+2026-06-17,Batch 1,Homepage messaging, hero image cleanup, and service wording revisions,"index.html, services.html, contact.html",6.0,$125/hr,$750,Updated homepage copy, service positioning, and key messaging for the new agent + senior focus.,Pending
+2026-06-17,Batch 2,Services page restructuring and outdated lifestyle section removal,"services.html, blog/posts, nav structure",4.0,$125/hr,$500,Reworked the services layout and removed outdated content to better match current service focus.,Pending
+2026-06-17,Batch 3,SEO/meta updates, JSON-LD cleanup, and wording consistency,"index.html, services.html, contact.html, posts/*.html",3.0,$125/hr,$375,Updated SEO metadata, structured data, and content wording to align across the site.,Pending
+2026-06-17,Batch 4,Asset updates and staging photo wiring,"assets/hero-images/*, HTML references",2.5,$125/hr,$312.50,Added and wired new staging photography for the homepage and supporting sections.,Pending
+2026-06-17,Batch 5,Summary docs and update report,"updates-06.17.26/*",1.5,$125/hr,$187.50,Prepared a final update summary and supporting documentation for review.,Pending
