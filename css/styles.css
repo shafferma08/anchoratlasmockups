@@ -330,8 +330,7 @@ button {
 }
 
 .mobile-menu a:hover {
-    background-color: var(--color-light-teal);
-    /* teal-700 */
+    background-color: rgba(255, 255, 255, 0.15);
 }
 
 @media (min-width: 768px) {
@@ -602,7 +601,7 @@ button {
 .read-more {
     font-size: 0.8rem;
     font-weight: 700;
-    color: var(--color-secondary);
+    color: var(--color-primary);
     text-transform: uppercase;
     letter-spacing: 0.05em;
     display: inline-flex;
@@ -620,7 +619,7 @@ button {
 
 .read-more:hover {
     background-color: var(--color-secondary);
-    color: white;
+    color: var(--color-dark-slate);
     transform: translateY(-2px);
 }
 
@@ -871,13 +870,7 @@ button {
 .wendy-text p {
     margin-bottom: 1.5rem;
     color: var(--color-gray-600);
-    text-align: justify;
-}
-
-@media (min-width: 768px) {
-    .wendy-text p {
-        text-align: left;
-    }
+    text-align: left;
 }
 
 .wendy-image-container {
@@ -1728,5 +1721,43 @@ button {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+/* Focus Indicators */
+*:focus-visible {
+    outline: 3px solid var(--color-secondary);
+    outline-offset: 3px;
+    border-radius: 2px;
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    .hero-bg .hero-slide {
+        animation: none;
+        opacity: 0;
+    }
+
+    .hero-bg .hero-slide:first-child {
+        opacity: 1;
+    }
+
+    .animate-on-scroll {
+        opacity: 1;
+        transform: translateY(0);
+        transition: none;
+    }
+
+    .logo img,
+    .wendy-image-container img,
+    .service-card,
+    .service-item-group,
+    .review-card,
+    .services-nav-link,
+    .read-more,
+    .btn-primary,
+    .slider-btn,
+    .social-icons a {
+        transition: none;
     }
 }
