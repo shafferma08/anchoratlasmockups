@@ -186,7 +186,21 @@
             line-height: 1.25rem;
         }
 
-        /* Alternating layout for variety if desired, but grid is clean */
+        /* Active sub-nav state when user scrolls to a section */
+        .services-nav-link.active {
+            background-color: var(--color-primary);
+            color: white;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Center an orphaned last card when grid has an odd number of items */
+        @media (min-width: 768px) {
+            .services-grid-list .service-item-group:last-child:nth-child(odd) {
+                grid-column: 1 / -1;
+                max-width: calc(50% - 2rem);
+                margin: 0 auto;
+            }
+        }
     </style>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-5BTVH0E3TE"></script>
@@ -364,15 +378,17 @@
                 </p>
             </div>
 
-            <div style="background-color: var(--color-light-cream); padding: 2.5rem 3rem; border-radius: 0.5rem; border-left: 6px solid #C17185; max-width: 56rem; margin: 0 auto; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);">
-                <h3 style="font-family: var(--font-serif); color: #9B3D5A; font-size: 1.1rem; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 1.5rem;">SENIOR REAL ESTATE AND TRANSITION SERVICES</h3>
-                <p style="margin-bottom: 1rem; color: var(--color-dark-slate);"><strong style="color: #9B3D5A;">Decluttering &amp; Organizing</strong></p>
-                <p style="margin-bottom: 1rem; color: var(--color-dark-slate);"><strong style="color: #9B3D5A;">Contractor and Repair Oversite</strong></p>
-                <p style="margin-bottom: 1rem; color: var(--color-dark-slate);"><strong style="color: #9B3D5A;">Estate Sale Services</strong></p>
-                <p style="margin-bottom: 1rem; color: var(--color-dark-slate);"><strong style="color: #9B3D5A;">Home Staging</strong></p>
-                <p style="margin-bottom: 1rem; color: var(--color-dark-slate);"><strong style="color: #9B3D5A;">Exterior Refresh &amp; Clean Up</strong></p>
-                <p style="margin-bottom: 1rem; color: var(--color-dark-slate);"><strong style="color: #9B3D5A;">Transition Assistance</strong></p>
-                <p style="margin-bottom: 0; color: var(--color-dark-slate);"><strong style="color: #9B3D5A;">Family Communication Liaison</strong></p>
+            <div class="service-item-group" style="max-width: 36rem; margin: 0 auto;">
+                <h3 class="group-title"><i data-lucide="heart" class="group-icon"></i> Senior Real Estate &amp; Transition Services</h3>
+                <ul class="service-list-items">
+                    <li><strong>Decluttering &amp; Organizing</strong></li>
+                    <li><strong>Contractor and Repair Oversight</strong></li>
+                    <li><strong>Estate Sale Services</strong></li>
+                    <li><strong>Home Staging</strong></li>
+                    <li><strong>Exterior Refresh &amp; Clean Up</strong></li>
+                    <li><strong>Transition Assistance</strong></li>
+                    <li><strong>Family Communication Liaison</strong></li>
+                </ul>
             </div>
         </div>
 
@@ -384,7 +400,7 @@
                     style="margin-bottom: 2rem; font-size: 1.5rem; font-family: var(--font-serif); color: var(--color-dark-slate); font-weight: 700;">
                     Don't see exactly what you need? We pride ourselves on custom solutions.
                 </p>
-                <button class="btn-primary" onclick="window.location.href='/#contact'">
+                <button class="btn-primary" onclick="window.location.href='contact.html'">
                     Contact Us for a Consultation
                 </button>
             </div>
@@ -436,6 +452,30 @@
 
     <!-- Script to Run Logic -->
     <script src="js/script.js"></script>
+
+    <script>
+        // Highlight the active section in the sticky sub-nav as user scrolls
+        (function () {
+            const navLinks = document.querySelectorAll('.services-nav-link');
+            const sections = document.querySelectorAll('.service-category-block[id]');
+            const observer = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        navLinks.forEach(function (l) {
+                            l.classList.remove('active');
+                            l.removeAttribute('aria-current');
+                        });
+                        var link = document.querySelector('.services-nav-link[href="#' + entry.target.id + '"]');
+                        if (link) {
+                            link.classList.add('active');
+                            link.setAttribute('aria-current', 'true');
+                        }
+                    }
+                });
+            }, { rootMargin: '-20% 0px -60% 0px' });
+            sections.forEach(function (s) { observer.observe(s); });
+        })();
+    </script>
 </body>
 
 </html>
