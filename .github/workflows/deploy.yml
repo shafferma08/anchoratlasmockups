@@ -1,0 +1,33 @@
+name: Deploy to DreamHost
+
+on:
+  workflow_dispatch: {}
+
+jobs:
+  deploy:
+    name: Upload site files via SFTP
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # Allow-list approach — only public-facing files reach DreamHost.
+      # Internal files (updates-06.17.26/, memory/, *.md, temp_schema_end.txt, etc.)
+      # are never included, so nothing private can accidentally go live.
+      - name: Prepare deploy folder
+        run: |
+          mkdir -p deploy_staging
+          cp -r css js assets posts deploy_staging/
+          cp *.html sitemap.xml robots.txt deploy_staging/
+          find deploy_staging -name .DS_Store -delete
+
+      - name: Deploy
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.6
+        with:
+          username: dh_fq6659
+          server: iad1-shared-b7-46.dreamhost.com
+          port: 22
+          password: ${{ secrets.DREAMHOST_SFTP_PASSWORD }}
+          local_path: './deploy_staging/*'
+          remote_path: '/home/dh_fq6659/anchorandatlasusa.com/'
+          sftp_only: true
