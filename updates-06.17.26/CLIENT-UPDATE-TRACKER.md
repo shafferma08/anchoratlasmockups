@@ -30,9 +30,14 @@ This tracker is meant to capture what each update set actually took, what it sho
 | 2026-06-17 | Batch 4 | Asset updates, staging photos, image preload wiring | assets/hero-images/*, HTML references | 2.5 | $125/hr | $312.50 | Added and wired new staging photography for the homepage and supporting sections. | Pending |
 | 2026-06-17 | Batch 5 | Summary docs, PDF handoff, update report | updates-06.17.26/* | 1.5 | $125/hr | $187.50 | Prepared a final update summary and supporting documentation for review. | Pending |
 
+| 2026-07-10 | Batch 6 | Services page UX/design review — fixed orphaned card layout, broken CTA link, sub-nav active state, hamburger button color | services.html, css/styles.css | 1.5 | $125/hr | $187.50 | Reviewed and corrected several UX issues on the services page including navigation highlighting and a broken contact button. | Pending |
+| 2026-07-10 | Batch 7 | Senior section overhaul — corrected off-brand pink text (confirmed via client scan it was markup pen, not design intent), replaced yellow box with matching white card, restored box title, tightened width | services.html | 1.5 | $125/hr | $187.50 | Fixed the senior services section to match the rest of the site's design and align exactly with Wendy's email instructions. | Pending |
+| 2026-07-10 | Batch 8 | Google reviews audit — compared live Google profile against site, added 3 missing reviews (Austen Zetrouer, Katy Glez, Audrey Boyle), updated structured data review count from 6 to 9 | index.html | 0.75 | $125/hr | $93.75 | Audited and synced all Google reviews to the site — added 3 that were missing. | Pending |
+| 2026-07-10 | Batch 9 | GitHub Actions deploy workflow — set up automated Dreamhost deployment with manual trigger, allow-list file filter to keep internal docs private, GitHub Pages remains as staging area | .github/workflows/deploy.yml, .htaccess | 1.0 | $125/hr | $125.00 | Set up one-click deployment to the live site while keeping GitHub Pages as a private staging area for client review. | Pending |
+
 ### Total estimate
-- **Total hours:** 17.0
-- **Suggested total at $125/hr:** **$2,125.00**
+- **Total hours:** 21.75
+- **Suggested total at $125/hr:** **$2,718.75**
 
 ## Notes
 - This is a realistic baseline for the work shown in the update summary.
